@@ -1,0 +1,7 @@
+<div *ngIf="event2">
+  <h2>{{event2.eventname | uppercase}} Details</h2>
+  <div><span>id: </span>{{event2._id}}</div>
+  <div><span>name: </span>{{event2.eventname}}</div>
+  <div><span>local: </span>{{event2.local}}</div>
+  <button (click)="goBack()">go back</button>
+</div>

@@ -1,0 +1,27 @@
+body{
+    background-color: #525252;
+}
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.ng-valid[required], .ng-valid.required  {
+	border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form)  {
+	border-left: 5px solid #a94442;
+}
+
+.signUpLink {
+	float: right;
+}
+
+formPadding {
+	padding-bottom: 20px; padding-top: 20px;
+}

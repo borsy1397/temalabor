@@ -1,0 +1,68 @@
+<!-- <div>
+  <ul>
+    <li *ngFor="let event of events">
+      <div class="container" style="background: red; margin: 10px; width: 50%">
+        <div class="row">
+          <div class="col-md-4" style="text-align: center">
+            <div class="container mb-3">
+              fenykep
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-4" style="text-align: center">
+                <div class="container mb-3">
+                  {{event.eventname}}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4" style="text-align: center">
+                <div class="container mb-3">
+                  {{event.date}} {{event.local}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4" style="text-align: center">
+            <div class="container mb-3">
+              21
+            </div>
+          </div>
+          <div class="col-md-8">
+            <button>Apply</button>
+          </div>
+        </div>
+      </div>
+      <p><strong>Eventname:</strong> {{ event.eventname }} <strong>Local:</strong> {{ event.local }}</p>
+    </li>
+  </ul>
+</div> -->
+
+<div class="wrapper">
+  <li *ngFor="let event of events">
+    <div class="wrapperElement">
+      <div class="nested1">
+        <div>
+          <img src="../../assets/football.png" alt="football" width="140px" height="150px">
+        </div>
+      </div>
+      <div class="nested2">
+        <div>
+          <h4>{{event.eventname}}</h4>
+        </div>
+        <div>
+          <!-- ha nem mukodne ez a resze -> style="display: table; width: 100%;" -->
+          <h5>{{event.local}}</h5>
+        </div>
+        <div class="wrapper3">
+          <!-- ha nem mukodne ez a resze ->style="width: 100%;  -->
+          <a routerLink="{{event._id}}"><button class="button">Details</button></a>
+          <button class="button">Apply</button>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>

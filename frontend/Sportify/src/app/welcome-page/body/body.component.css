@@ -1,0 +1,9 @@
+.container-full {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    padding: 3vw;
+}

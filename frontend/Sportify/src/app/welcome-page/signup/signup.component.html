@@ -1,0 +1,71 @@
+<div class="jumbotron">
+  <div class="container formPadding" [hidden]="submitted">
+    <form #signUpForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstname">Firstname</label>
+          <input type="text" class="form-control" id="firstname"
+          [(ngModel)]="newUser.firstname" name="firstname" placeholder="Firstname" required #firstname="ngModel" autocomplete="off">
+          <!-- <div [hidden]="firstname.valid || firstname.pristine" class="alert alert-danger">
+            Firstname is required
+          </div> -->
+          <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)" class="alert alert-danger">
+            <div *ngIf="firstname.errors.required">
+              Firstname is required.
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastname">Lastname</label>
+          <input type="text" class="form-control" id="lastname"
+          [(ngModel)]="newUser.lastname" name="lastname" placeholder="Lastname" required #lastname="ngModel" autocomplete="off">
+          <!-- <div [hidden]="lastname.valid || lastname.pristine" class="alert alert-danger">
+            Lastname is required
+          </div> -->
+          <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+            <div *ngIf="lastname.errors.required">
+              Lastname is required.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email"
+        [(ngModel)]="newUser.email" name="email" placeholder="Email" required #email="ngModel" autocomplete="off">
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+          Email is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" minlength="4"
+        [(ngModel)]="newUser.username" name="username" placeholder="Username" required #username="ngModel" autocomplete="off">
+        <!-- <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+          Username is required
+        </div> -->
+        <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+          <div *ngIf="username.errors.required">
+            Username is required.
+          </div>
+          <div *ngIf="username.errors.minlength">
+            Username must be at least 4 characters long.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password"
+        [(ngModel)]="newUser.password" name="password" placeholder="Password" required #password="ngModel" autocomplete="off">
+        <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+          Password is required
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="!signUpForm.form.valid">REGISTER</button>
+      <a class="loginLink" [routerLink]="routerLinkLogin">Login</a>
+    </form>
+  </div>
+  <div [hidden]="!submitted">
+    <h2>Thank you for your registration!</h2>
+  </div>
+</div>

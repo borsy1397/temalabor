@@ -1,0 +1,31 @@
+#headerTitle {
+    text-align: center;
+    font-size: 8vw;
+    margin-bottom: 1vw;
+}
+
+#headerDescription {
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 1vw;
+}
+
+.navbar-custom {
+    background: rgba(158, 143, 144, 0.33);
+}
+
+.backgroundHeader {
+    width: 100%;
+    background: url('../../../assets/backgroundImage.jpg') no-repeat center;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    background-size: 100% auto;
+    color: #0076ff
+}
+
+.container-full {
+    margin: 0 auto;
+}

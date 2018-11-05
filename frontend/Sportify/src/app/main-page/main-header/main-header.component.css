@@ -1,0 +1,28 @@
+body {
+    padding-top: 54px;
+  }
+  
+  @media (min-width: 992px) {
+    body {
+      padding-top: 56px;
+    }
+  }
+
+  .container-full {
+    padding: 0 auto; margin: 0 auto; 
+      width: 100%;
+  }
+
+.hatter {
+  background-image: url("../../../assets/tiny-squares.png");
+  background-repeat: repeat-x;
+}
+
+
+li:hover {
+  background-color:#2EA620;
+}
+
+.navbarStyle {
+  padding: 0 auto; margin: 0 auto; right: 0; float: right;
+}
