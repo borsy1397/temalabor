@@ -17,7 +17,10 @@ export class SignupComponent implements OnInit {
     firstname:  "",
     lastname: "",
     password: "",
-    email: ""
+    limit: 0,
+    description: "",
+    email: "",
+    points: 0
   }
 
   submitted = false;

@@ -1,0 +1,79 @@
+ul {
+    list-style-type: none;
+}
+
+li
+{
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+
+.wrapper {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  width: 100%;
+}
+
+.wrapper3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.wrapper > div{
+  background: aqua;
+  padding: 1em;
+} 
+
+.wrapperElement {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+}
+
+.wrapperElement > div{
+  background: rgba(0, 255, 255, 0.623);
+  padding: 0;
+  margin: 0;
+}
+.wrapperElement > div:nth-child(odd){
+  padding: 0;
+  margin: 0;
+}
+
+.nested2{
+  display: grid;
+  margin: 0;
+  padding: 0 auto;
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.nested2 > div{
+  display: grid;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  right: 0;
+} 
+
+.nested1 {
+  padding: 0 auto;
+  min-width: 140px;
+  max-width: 140px;
+  min-height: 150px;
+  max-height: 150px;
+}
+
+.wrapper3 > button {
+  width: 100%;
+}

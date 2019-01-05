@@ -1,7 +1,128 @@
 .footerContainer {
-    background: #313745;
+    background:black;
+}
+
+.footer-copyright {
+    color: white;
+}
+
+.footer-copyright a{
+    color: white;
+    text-decoration: none;
 }
 .container-full {
     margin: 0 auto;
+    padding: 0;
     width: 100%;
 }
+
+#contactus {
+    padding-top: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+#socialmedia {
+    padding-top: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-android {
+    background: #a4c639;
+    color: white;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
+  .fa-skype {
+    background: #00aff0;
+    color: white;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    padding-right: 15px;
+    
+}
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.footer-center {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-center i, span {
+  color: white;
+}
+
+
+
+
+

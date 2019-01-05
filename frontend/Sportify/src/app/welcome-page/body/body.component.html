@@ -1,45 +1,120 @@
-<main class="container-full text-center teal pt-4 fill">
-    <div [hidden]="submitted">
+<main class="container-full text-center teal pt-4 fill bodyBackground">
+    <h1>BME-VIK</h1>
+    <h2>AUT</h2>
+    <hr>
+    <p>Log in or register!</p>
+
+    <div *ngIf="!getdataservice.loggedIn()" [hidden]="submitted">
         <div class="container mb-3">
-            <a [routerLink]="routerLinkSignUp"><button (click)="hiddenButtons()" type="button" class="btn btn-primary">Sign up</button></a>
+            <a [routerLink]="routerLinkLogin"><button type="button" (click)="hiddenButtons()" class="btn btn-success">Login</button></a>
         </div>
-        <div class="container">
-            <a [routerLink]="routerLinkLogin"><button type="button" (click)="hiddenButtons()" class="btn btn-secondary">Login</button></a>
+        <div class="container mb-3">
+            <a [routerLink]="routerLinkSignUp"><button type="button" (click)="hiddenButtons()" class="btn btn-primary">Sign
+                    up</button></a>
+        </div>
+
+    </div>
+
+    <div *ngIf="getdataservice.loggedIn()">
+        <div class="container mb-3">
+            <a [routerLink]="routerLinkHome"><button type="button" class="btn btn-primary plus">Go to Events</button></a>
         </div>
     </div>
 
     <router-outlet></router-outlet>
 
-    <div class="container main-content">
+
+    <section id="icons">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-4 col-xl-2">
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1">
+                <p><img class=" img-fluid" src="../../../assets/ballicons.png" alt="card image"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1">
+                <p><img class=" img-fluid" src="../../../assets/basketballicons2.png" alt="card image"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4  col-lg-2 col-xl-1">
+                <p><img class=" img-fluid" src="../../../assets/americanfootball.png" alt="card image"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1">
+                <p><img class=" img-fluid" src="../../../assets/volleyball.png" alt="card image"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1">
+                <p><img class=" img-fluid" src="../../../assets/waterpolo.png" alt="card image"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1">
+                <p><img class=" img-fluid" src="../../../assets/baseball.png" alt="card image"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1">
+                <p><img class=" img-fluid" src="../../../assets/curling.png" alt="card image"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1">
+                <p><img class=" img-fluid" src="../../../assets/ballicons.png" alt="card image"></p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-4 col-xl-2">
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="pb-5">
+        <div class="card-deck">
+            <div class="col-xs-12 col-sm-12 col-md-2">
+            </div>
+            <div class="card col-xs-12 col-sm-12 col-md-2 color1">
+                <div class="card-body">
+                    <h5 class="card-title">Events</h5>
+                    <hr>
+                    Apply and play!
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-12 col-md-2 color2">
+                <div class="card-body">
+                    <h5 class="card-title">My Events</h5>
+                    <hr>
+                    Create own events!
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-12 col-md-2 color3">
+                <div class="card-body">
+                    <h5 class="card-title">Points</h5>
+                    <hr>
+                    Collect points!
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-12 col-md-2 color4">
+                <div class="card-body">
+                    <h5 class="card-title">Friends</h5>
+                    <hr>
+                    Make friends!
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-2">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <div id="app" class="container main-content">
         <article>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis eos similique pariatur?
-            Corrupti fugiat in soluta alias repellendus odio reprehenderit expedita a rem nemo delectus est,
-            illum repellat quibusdam esse.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis eos similique pariatur?
-            Corrupti fugiat in soluta alias repellendus odio reprehenderit expedita a rem nemo delectus est,
-            illum repellat quibusdam esse.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis eos similique pariatur?
-            Corrupti fugiat in soluta alias repellendus odio reprehenderit expedita a rem nemo delectus est,
-            illum repellat quibusdam esse.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis eos similique pariatur?
-            Corrupti fugiat in soluta alias repellendus odio reprehenderit expedita a rem nemo delectus est,
-            illum repellat quibusdam esse.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis eos similique pariatur?
-            Corrupti fugiat in soluta alias repellendus odio reprehenderit expedita a rem nemo delectus est,
-            illum repellat quibusdam esse.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis eos similique pariatur?
-            Corrupti fugiat in soluta alias repellendus odio reprehenderit expedita a rem nemo delectus est,
-            illum repellat quibusdam esse.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis eos similique pariatur?
-            Corrupti fugiat in soluta alias repellendus odio reprehenderit expedita a rem nemo delectus est,
-            illum repellat quibusdam esse.
+            <h3 style="color: rgb(56, 56, 56)">Ez a weboldal a Budapesti Műszaki és Gazdaságtudományi Egyetem,
+                Villamosmérnöki és Informatikai Karának mérnökinformatikus szakának
+                egy tantárgyának keretein belül készült..</h3>
+            <h3 style="color: rgb(56, 56, 56)">Egyébként az alkalmazásunk neve Sportify, ahol különböző eseményekre
+                lehet feliratkozni
+                és játszani. Létre lehet hozni saját eseményeket is.</h3>
         </article>
     </div>
+
+    <app-team></app-team>
+
+
 </main>

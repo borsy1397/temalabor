@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <li *ngFor="let event of events">
+    <div class="wrapperElement">
+      <div class="nested1">
+        <div>
+          <img src="../../assets/{{event.type}}.png" alt="football" width="140px" height="150px">
+        </div>
+      </div>
+      <div class="nested2">
+        <div>
+          <h4>{{event.eventname}}</h4>
+        </div>
+        <div>
+          <h5>{{event.local}}</h5>
+        </div>
+        <div class="wrapper3">
+          <button routerLink="/home/events/{{event._id}}" class="button">Details</button>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>

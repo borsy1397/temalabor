@@ -11,6 +11,15 @@ import { WelcomeComponent } from './welcome-page/welcome/welcome.component';
 import { GetEventsComponent } from './main-page/get-events/get-events.component';
 import { CreateEventComponent } from './main-page/create-event/create-event.component';
 import { EventDetailComponent } from './main-page/event-detail/event-detail.component';
+import { MyEventsComponent } from './main-page/my-events/my-events.component';
+import { ScoreboardComponent } from './main-page/scoreboard/scoreboard.component';
+import { ProfileComponent } from './main-page/profile/profile.component';
+
+import { AuthGuard } from './auth.guard';
+
+
+
+
 
 
 /**
@@ -33,10 +42,14 @@ const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: 'events/:id', component: EventDetailComponent },
       { path: 'events', component: GetEventsComponent },
-      { path: 'create', component: CreateEventComponent }
+      { path: 'create', component: CreateEventComponent },
+      { path: 'myevents', component: MyEventsComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'scoreboard', component: ScoreboardComponent }
     ]
   },
   { path: '',

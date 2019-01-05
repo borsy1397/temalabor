@@ -1,7 +1,17 @@
 <div *ngIf="event2">
-  <h2>{{event2.eventname | uppercase}} Details</h2>
-  <div><span>id: </span>{{event2._id}}</div>
-  <div><span>name: </span>{{event2.eventname}}</div>
-  <div><span>local: </span>{{event2.local}}</div>
-  <button (click)="goBack()">go back</button>
+  <h2>{{event2.eventname | uppercase}} event's details</h2> <button (click)="goBack()" class="btn btn-primary">Go back</button>
+  <div><span> <strong> Local:</strong></span>{{event2.local}}</div>
+  <div><span><strong> Date:</strong> </span> <span id="time"> {{main[0]}}</span>{{time[0]}}</div>
+  <div><span><strong> Sport:</strong> </span>{{event2.type}}</div>
+  <div><span><strong> Limit:</strong> </span>{{event2.limit}}</div>
+  <div><span><strong> Organizer:</strong> </span>{{event2.organizer}}</div>
+  <div><span><strong> Members:</strong> </span></div>
+  <li *ngFor="let member of event2.member">
+    {{member}}
+  </li>
+  <div id="desc"><span><strong> Description:</strong> </span>{{event2.description}}</div>
+  <agm-map [latitude]="lat" [longitude]="lng" style="height: 400px;">
+    <agm-marker [latitude]="lat" [longitude]="lng">
+    </agm-marker>
+  </agm-map>
 </div>

@@ -31,11 +31,11 @@ li
 
 .wrapperElement {
   display: grid;
+  background: rgba(0, 255, 255, 0.623);
   grid-template-columns: 3fr 7fr;
 }
 
 .wrapperElement > div{
-  background: purple;
   padding: 0;
   margin: 0;
 }

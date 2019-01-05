@@ -10,13 +10,13 @@ export class MainBodyComponent implements OnInit {
   routerLinkCreate = "/home/create";
   routerLinkEvents = "/home/events";
   routerLinkMyEvents = "/home/myevents";
-  routerLinkArchiv = "/home/archiv";
   routerLinkScoreboard = "/home/scoreboard";
   routerLinkProfile = "/home/profile";
 
   constructor() { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
   }
 
 }

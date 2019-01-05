@@ -1,66 +1,34 @@
-<!-- <div>
-  <ul>
-    <li *ngFor="let event of events">
-      <div class="container" style="background: red; margin: 10px; width: 50%">
-        <div class="row">
-          <div class="col-md-4" style="text-align: center">
-            <div class="container mb-3">
-              fenykep
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-md-4" style="text-align: center">
-                <div class="container mb-3">
-                  {{event.eventname}}
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4" style="text-align: center">
-                <div class="container mb-3">
-                  {{event.date}} {{event.local}}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4" style="text-align: center">
-            <div class="container mb-3">
-              21
-            </div>
-          </div>
-          <div class="col-md-8">
-            <button>Apply</button>
-          </div>
-        </div>
-      </div>
-      <p><strong>Eventname:</strong> {{ event.eventname }} <strong>Local:</strong> {{ event.local }}</p>
-    </li>
-  </ul>
-</div> -->
+<div>
+  <form id="filterEventname" name="filterEventname" style="margin: 10px">
+    <label for="filterEventname" style="margin-right: 20px">Filter events by name:</label>
+    <input type="text" class="form-control" style="width: 20%; display: inline;margin-right: 20px;" [(ngModel)]="term"
+      name="filterEventname" id="filterEventname">
+    <div style="float: right;">
+      <button (click)="sortAsc()" class="btn" style="margin-right: 20px">Sort by date asc</button>
+      <button (click)="sortDesc()" class="btn">Sort by date desc</button>
+    </div>
+  </form>
+</div>
+
+
 
 <div class="wrapper">
-  <li *ngFor="let event of events">
+  <li *ngFor="let event of events  | filterEventname: term">
     <div class="wrapperElement">
       <div class="nested1">
-        <div>
-          <img src="../../assets/football.png" alt="football" width="140px" height="150px">
-        </div>
+        <img src="../../assets/{{event.type}}.png" alt="sporticon" width="140px" height="150px">
       </div>
       <div class="nested2">
         <div>
           <h4>{{event.eventname}}</h4>
         </div>
         <div>
-          <!-- ha nem mukodne ez a resze -> style="display: table; width: 100%;" -->
-          <h5>{{event.local}}</h5>
+          <h6>{{event.local}}</h6>
         </div>
         <div class="wrapper3">
-          <!-- ha nem mukodne ez a resze ->style="width: 100%;  -->
-          <a routerLink="{{event._id}}"><button class="button">Details</button></a>
-          <button class="button">Apply</button>
+          <button class="button btn btn-primary" routerLink="{{event._id}}">Details</button>
+          <button *ngIf="!event.applied" class="button btn-secondary" (click)="applyEvent(event)">Apply</button>
+          <button *ngIf="event.applied" class="button btn btn-secondary" (click)="unApplyEvent(event)">UnApply</button>
         </div>
       </div>
     </div>

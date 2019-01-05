@@ -101,5 +101,15 @@ body {
 }
 
 .routerOutlet {
-  overflow-y: scroll; max-height: 500px;
+  overflow-y: scroll;
+  max-height: 600px;
+  border: 1px solid rgb(192, 192, 192);
+}
+
+
+  
+@media screen and (max-width: 991px) {
+  .vl{
+    display: none;
+  }
 }

@@ -1,5 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import { GetdataService } from '../../getdata.service';
+
 
 @Component({
   selector: 'app-body',
@@ -8,11 +10,15 @@ import { GetdataService } from '../../getdata.service';
 })
 export class BodyComponent implements OnInit {
 
+
   submitted = false;
   routerLinkLogin = "/login";
   routerLinkSignUp = "/signup";
+  routerLinkHome = "/home";
  
   constructor(private getdataservice: GetdataService) { }
+
+  
 
   hiddenButtons(){
     if(!this.submitted){
@@ -20,6 +26,7 @@ export class BodyComponent implements OnInit {
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }
